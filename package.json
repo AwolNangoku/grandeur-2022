@@ -1,0 +1,31 @@
+{
+  "name": "grandeur-server",
+  "version": "1.0.0",
+  "description": "Beauty and Spa application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-dev index.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AwolNangoku/grandeur-2022.git"
+  },
+  "author": "Ncedile Nkonyana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AwolNangoku/grandeur-2022/issues"
+  },
+  "homepage": "https://github.com/AwolNangoku/grandeur-2022#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.2",
+    "node-dev": "^7.1.0",
+    "nodemailer": "^6.7.2"
+  }
+}
