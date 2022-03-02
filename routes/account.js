@@ -11,15 +11,16 @@ router.post("/register/", jsonParser, async function (req, res) {
     const user = new User({
       firstname: req.body.firstname,
       lastname: req.body.lastname,
-      emailAddress: req.body.email_address,
-      mobileNumber: req.body.mobile_number,
+      emailAddress: req.body.emailAddress,
+      mobileNumber: req.body.mobileNumber,
       idNumber: req.body.idNumber,
       password: req.body.password,
+      bio: req.body.bio,
     });
     await user
       .save()
       .then((savedUser) => {
-        res.send({
+        res.status(201).send({
           success: true,
           message: "Your account has been created successfully!",
           user: savedUser,

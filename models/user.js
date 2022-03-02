@@ -13,6 +13,7 @@ const userSchema = new Schema(
     idNumber: { type: String, unique: true },
     password: String,
     timestamp: { type: Date, default: Date.now },
+    bio: String,
   },
   { strict: false }
 );
