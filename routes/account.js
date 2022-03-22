@@ -60,4 +60,15 @@ router.post("/login", jsonParser, async function (req, res) {
     });
 });
 
+router.get("/user/:userId", jsonParser, function (req, res) {
+  User.findById({ _id: req.params.userId })
+    .then((user) => {
+      res.send(user);
+    })
+    .catch((error) => {
+      console.log("1. Failed finding user from the database");
+      res.status(400).send({ message: error });
+    });
+});
+
 module.exports = router;
